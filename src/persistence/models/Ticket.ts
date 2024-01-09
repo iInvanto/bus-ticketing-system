@@ -25,7 +25,5 @@ export class DbTicket extends Model {
 
   is_open!: boolean;
 
-  user_id!: number;
-
-  reservation_date!: Date;
+  user_id!: number | null;
 }
