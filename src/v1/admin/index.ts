@@ -37,7 +37,7 @@ export default function adminRouter(): Router {
 
       if (tickets.length > 0) {
         await DbTicket.query()
-          .update({ is_open: true, user_id: null })
+          .update({ is_open: true, user_details: null })
           .where("bus_id", busId);
 
         res.status(200).json({
